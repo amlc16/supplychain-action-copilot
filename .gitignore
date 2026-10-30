@@ -1,6 +1,20 @@
+# Python
 .venv/
 __pycache__/
-data/
+*.py[cod]
+
+# Environment variables and secrets
 .env
-*.joblib
+.streamlit/secrets.toml
+
+# macOS
 .DS_Store
+
+# Dataset files
+data/*
+!data/orders_modeling.csv
+
+# Model artifacts: keep only the compact model used by the dashboard
+models/*.joblib
+!models/late_risk_model_compact.joblib
+!models/compact_feature_columns.joblib
